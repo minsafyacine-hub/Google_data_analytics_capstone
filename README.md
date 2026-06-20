@@ -38,7 +38,7 @@ Before assembling the final dashboard, I isolated 6 specific metrics to validate
 *   **Objective:** Establish the baseline volume and baseline market share for both user categories.
 *   **What the Data Shows:** A clear breakdown showing that members represent **62.51%** of the user base, while casual riders make up **37.49%**.
 *   **Key Takeaway:** Members generate the majority of total trips, but casual riders represent more than a third of the market, proving they are a massive pool of potential subscribers.
-*   ![image_alt](01 user distribution.png)
+*   ![image alt]([01 user distribution.png](https://github.com/minsafyacine-hub/Google_data_analytics_capstone/blob/d7c4fbdafc632d628d48e68000108f643a245886/01%20user%20distribution.png)
 
 ###  Visualization 2: Trips by Bike and User Type
 *   **Objective:** Determine if the type of bicycle chosen differs based on who is riding.
