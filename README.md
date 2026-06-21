@@ -14,14 +14,10 @@ Cyclistic, a prominent bike-share program in Chicago, wants to maximize its long
 ## 2. The 6-Step Data Analysis Framework
 
 ###  Step 1: Ask
-*   **Goal:** Identify the behavioral differences between the two user types to guide marketing strategies.
-*   **Initial Hypothesis:** Annual members use Cyclistic for daily commuting (structured, routine trips), while casual riders use it for leisure, tourism, and weekend recreation (flexible, longer trips).
+The primary goal of this analysis is to identify the distinct behavioral differences between annual members and casual riders in order to guide future targeted marketing strategies. Initially, the project was built on the hypothesis that annual members predominantly utilize Cyclistic for their daily commuting—resulting in structured, routine trips—whereas casual riders turn to the service for leisure, tourism, and weekend recreation, which typically translates into more flexible and longer trips.
 
 ###  Step 2: Prepare
-*   **Data Sources Used:** 
-    *   Raw compressed dataset: `202605-divvy-tripdata.zip`
-    *   Cleaned SQL Query export: `bquxjob_3b1beb7a_19ed1691482.csv`
-*   **Tool Used:** **Microsoft Excel** was utilized for initial data exploration, inspecting column types, and creating calculated fields such as `ride_length` (trip duration) and `day_of_week` to prepare the data for deep analysis.
+The analysis was conducted using two main data sources: the raw compressed dataset containing the historical records (202605-divvy-tripdata.zip) and a cleaned SQL query export (bquxjob_3b1beb7a_19ed1691482.csv). Microsoft Excel was utilized as the primary tool for initial data exploration, which involved inspecting column types and creating calculated fields such as ride_length to determine trip duration and day_of_week to isolate daily trends, effectively preparing the data for subsequent deep analysis.
 
 ###  Step 3: Process & Analyze (SQL / BigQuery)
 Due to the massive scale of the dataset, I imported the data into **BigQuery (SQL)** to perform advanced queries, data aggregation, and statistical filtering. Below is the step-by-step breakdown of the 6 core queries executed, along with their objectives and takeaways.
@@ -33,15 +29,11 @@ Due to the massive scale of the dataset, I imported the data into **BigQuery (SQ
 Before assembling the final dashboard, I isolated 6 specific metrics to validate my hypotheses. Here is the documentation for each visualization:
 
 ###  Visualization 1: Percentages of Casual Riders and Members
-*   **Objective:** Establish the baseline volume and baseline market share for both user categories.
-*   **What the Data Shows:** A clear breakdown showing that members represent **62.51%** of the user base, while casual riders make up **37.49%**.
-*   **Key Takeaway:** Members generate the majority of total trips, but casual riders represent more than a third of the market, proving they are a massive pool of potential subscribers.
+This initial phase aimed to establish the baseline volume and baseline market share for both user categories. The extracted data shows a clear breakdown revealing that annual members represent **62.51%** of the total user base, while casual riders make up **37.49%**. The key takeaway from this metric is that while members generate the clear majority of total trips, casual riders represent more than a third of the market, proving they constitute a massive pool of potential subscribers for future conversion campaigns.
 *   ![image alt](https://github.com/minsafyacine-hub/Google_data_analytics_capstone/blob/58a124fe3cbce76ce9ffd5d749aa387cec1b55f8/Capture%20d%E2%80%99%C3%A9cran%202026-06-21%20152156.png)
 
 ###  Visualization 2: Trips by Bike and User Type
-*   **Objective:** Determine if the type of bicycle chosen differs based on who is riding.
-*   **What the Data Shows:** Both members and casuals show a massive preference for `electric_bike` over `classic_bike`.
-*   **Key Takeaway:** Electric bikes are the primary driver of engagement for both groups. Marketing assets should heavily feature electric bikes to attract conversions.
+The objective of this query was to determine if the specific type of bicycle chosen differs based on the rider's category. The data shows a massive preference for electric bikes over classic bikes across both user groups. The key takeaway here is that electric bikes act as the primary driver of engagement for all customers, suggesting that future marketing assets should heavily feature electric models to successfully attract and convert casual riders.
 *   ![image_alt](https://github.com/minsafyacine-hub/Google_data_analytics_capstone/blob/58a124fe3cbce76ce9ffd5d749aa387cec1b55f8/Capture%20d%E2%80%99%C3%A9cran%202026-06-21%20152417.png)
 
 ###  Visualization 3: Average Riding Duration per Type (Descriptive Statistics)
