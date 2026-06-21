@@ -1,8 +1,6 @@
 # Cyclistic Bike-Share Analysis Case Study
 ### *Google Data Analytics Capstone Project*
 
-![Cyclistic Logo](dataset-thumbnail.png)
-
 ---
 
 ## 1. Introduction & Methodology
@@ -38,44 +36,44 @@ Before assembling the final dashboard, I isolated 6 specific metrics to validate
 *   **Objective:** Establish the baseline volume and baseline market share for both user categories.
 *   **What the Data Shows:** A clear breakdown showing that members represent **62.51%** of the user base, while casual riders make up **37.49%**.
 *   **Key Takeaway:** Members generate the majority of total trips, but casual riders represent more than a third of the market, proving they are a massive pool of potential subscribers.
-*   ![image alt](https://github.com/minsafyacine-hub/Google_data_analytics_capstone/blob/d7c4fbdafc632d628d48e68000108f643a245886/01%20user%20distribution.png)
+*   ![image alt](https://github.com/minsafyacine-hub/Google_data_analytics_capstone/blob/58a124fe3cbce76ce9ffd5d749aa387cec1b55f8/Capture%20d%E2%80%99%C3%A9cran%202026-06-21%20152156.png)
 
 ###  Visualization 2: Trips by Bike and User Type
 *   **Objective:** Determine if the type of bicycle chosen differs based on who is riding.
 *   **What the Data Shows:** Both members and casuals show a massive preference for `electric_bike` over `classic_bike`.
 *   **Key Takeaway:** Electric bikes are the primary driver of engagement for both groups. Marketing assets should heavily feature electric bikes to attract conversions.
-*   `[Insert Capture d’écran - Sheet 02 trips by bike and user type]`
+*   ![image_alt](https://github.com/minsafyacine-hub/Google_data_analytics_capstone/blob/58a124fe3cbce76ce9ffd5d749aa387cec1b55f8/Capture%20d%E2%80%99%C3%A9cran%202026-06-21%20152417.png)
 
 ###  Visualization 3: Average Riding Duration per Type (Descriptive Statistics)
 *   **Objective:** Benchmark the fundamental ride behaviors using statistical aggregation.
 
 #### Descriptive Statistics Matrix (SQL Query 3 Result):
 
-| User Type | Total Rides | Average Ride Duration (Min) | Most Popular Day | Peak Operating Hour |
-| :--- | :--- | :--- | :--- | :--- |
-| **Casual** | ~240,000 | **20.5 mins** | Sunday | 5:00 PM (17:00) |
-| **Member** | ~400,000 | **12.2 mins** | Weekdays | 5:00 PM (17:00) |
+| member_casual | total_trips | moyenne_minutes | mediane_minutes | standart_deviation_minutes | variance_minutes | min_minutes | max_minutes |
+| :--- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| **member** | 402163 | 12.37 | 8.87 | 19.77 | 390.71 | 0.52 | 1439.47 |
+| **casual** | 238924 | 19.56 | 11.62 | 38.65 | 1494.16 | 0.52 | 1438.68 |
 
 *   **Key Takeaway:** The behavior gap is undeniable. Casual riders keep the bikes **twice as long** on average (~20.5 mins) compared to members (~12.2 mins), heavily supporting the leisure vs. utility hypothesis.
-*   `[Insert Capture d’écran - Sheet 03 average riding duration per type]`
+*   ![image alt](https://github.com/minsafyacine-hub/Google_data_analytics_capstone/blob/58a124fe3cbce76ce9ffd5d749aa387cec1b55f8/Capture%20d%E2%80%99%C3%A9cran%202026-06-21%20152507.png)
 
 ###  Visualization 4: Hourly Bike Trips Context
 *   **Objective:** Analyze traffic fluctuations hour-by-hour during a 24-hour cycle.
 *   **What the Data Shows:** Members show two sharp peaks at **8:00 AM** and **5:00 PM** (standard corporate commute hours). Casual riders show a smooth, steady curve that rises throughout the afternoon, peaking around 5:00 PM without any morning spike.
 *   **Key Takeaway:** Members use the service as a functional transit tool for work, while casuals ride progressively as the day warms up or during afternoon free time.
-*   `[Insert Capture d’écran - Sheet 04 hourly bike trips context]`
+*   ![image alt](https://github.com/minsafyacine-hub/Google_data_analytics_capstone/blob/58a124fe3cbce76ce9ffd5d749aa387cec1b55f8/Capture%20d%E2%80%99%C3%A9cran%202026-06-21%20152538.png)
 
 ###  Visualization 5: Trends in Bike Trips by Day of the Week
 *   **Objective:** Observe how ride volume shifts between weekdays and weekends.
 *   **What the Data Shows:** Member trips stay consistently high from Monday to Friday and drop on weekends. Casual trips do the exact opposite, spiking dramatically on **Saturday and Sunday**.
 *   **Key Takeaway:** Weekdays belong to commuters (members), while weekends belong to recreational riders (casuals).
-*   `[Insert Capture d’écran - Sheet 05 Trends in bike trips by day of the week]`
+*   ![image alt](https://github.com/minsafyacine-hub/Google_data_analytics_capstone/blob/58a124fe3cbce76ce9ffd5d749aa387cec1b55f8/Capture%20d%E2%80%99%C3%A9cran%202026-06-21%20152606.png)
 
 ###  Visualization 6: Top Stations Map
 *   **Objective:** Map out the spatial concentration of the top 50 most popular starting stations in Chicago.
 *   **What the Data Shows:** A dense, tight cluster of high-traffic stations positioned directly along the Lake Michigan shoreline, tourist hubs, and waterfront parks.
 *   **Key Takeaway:** Casual riders are not evenly distributed across Chicago; they are highly localized around leisure areas and scenic routes.
-*   `[Insert Capture d’écran - Sheet 05 top stations]`
+*   ![image alt](https://github.com/minsafyacine-hub/Google_data_analytics_capstone/blob/58a124fe3cbce76ce9ffd5d749aa387cec1b55f8/Capture%20d%E2%80%99%C3%A9cran%202026-06-21%20152635.png)
 
 ---
 
@@ -86,7 +84,7 @@ To present a cohesive narrative to executive stakeholders, I consolidated these 
 ### Interactive Dashboard
  **[View the Interactive Tableau Dashboard Here](https://public.tableau.com/app/profile/yacine.minsaf/viz/google_data_analytics_capstone_17817096046960/Dashboard)**
 
-`[Insert your final Dashboard.png here]`
+![image alt](https://github.com/minsafyacine-hub/Google_data_analytics_capstone/blob/58a124fe3cbce76ce9ffd5d749aa387cec1b55f8/Capture%20d%E2%80%99%C3%A9cran%202026-06-21%20152840.png)
 
 ### Design & UI Architecture Choices
 *   **Color Palette Consistency:** Borrowing directly from Cyclistic's visual identity, I used the exact corporate teal (`#3B8E9B`) to represent the primary data structure, paired with a high-contrast orange to clearly separate the user categories.
@@ -112,6 +110,4 @@ Based on the insights shared in the dashboard, here are three targeted recommend
 ### Conclusion
 By shifting the corporate strategy from broad city-wide advertising to location-specific, weekend-centric campaigns, Cyclistic can efficiently convert high-value casual riders into loyal subscribers, driving sustainable subscription revenue for years to come.
 
----
-*Project completed by [Ton Nom / Prénom] - June 2026.*
 
